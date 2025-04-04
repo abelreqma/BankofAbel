@@ -1,6 +1,4 @@
 <?php
-session_start();
-
 $host = 'localhost';
 $username = 'root';
 $password = '';
@@ -16,28 +14,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $uname = $_POST['uname'];
     $psw = $_POST['psw'];
 
-    $sql = "SELECT id, username, password, role FROM users WHERE username = ?";
+    $sql = "SELECT id, username, password, role, balance FROM users WHERE username = ?";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("s", $uname);
     $stmt->execute();
     $stmt->store_result();
 
     if ($stmt->num_rows > 0) {
-        $stmt->bind_result($id, $username, $db_password, $role);
+        $stmt->bind_result($id, $username, $db_password, $role, $balance);
         $stmt->fetch();
 
-        // Compare plaintext passwords directly
         if ($psw === $db_password) {
-            $_SESSION['loggedin'] = true;
-            $_SESSION['username'] = $username;
-            $_SESSION['id'] = $id;
+
+            setcookie("user_id", $id, time() + (86400 * 30), "/");
+            setcookie("user_role", $role, time() + (86400 * 30), "/");
 
             if ($role === 'admin') {
-                setcookie("user_role", "admin", time() + (86400 * 30), "/");
-                header("Location: /dashboard.php");
+                header("Location: /admin.php");
             } else {
-                setcookie("user_role", "other_user", time() + (86400 * 30), "/");
-                header("Location: /access_denied.php");
+                header("Location: /dashboard.php");
             }
             exit();
         } else {
