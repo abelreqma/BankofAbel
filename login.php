@@ -68,7 +68,7 @@ span.psw {
 </head>
 <body>
 
-<h2>Broken Authentication</h2>
+<h2>Broken Access Control</h2>
 
 <form action="/auth.php" method="post">
    <div class="imgcontainer">
