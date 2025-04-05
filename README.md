@@ -18,6 +18,7 @@ sudo cp -r /path/to/BankofAbel/* /var/www/html/
 4. Configure Web Server:
 ```bash
 sudo systemctl start [apache2, nginx, httpd]
+sudo systemctl restart [apache2, nginx, httpd]
 ```
 * Modify corresponding configuration page (/etc/x/x.conf) to connect MySQL
 
