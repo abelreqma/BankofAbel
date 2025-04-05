@@ -8,6 +8,7 @@ git clone https://github.com/abelreqma/BankofAbel
 ```
 2. Set up the MySQL Database
 ```bash
+sudo systemctl start [mysql, mysqld]
 mysql -u <user> -p < bank_of_abel.sql
 ```
 3. Place Project Files in Web Server Directory; i.e., `/var/www/html`
