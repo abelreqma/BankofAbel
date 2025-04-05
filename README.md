@@ -1,5 +1,5 @@
 # Overview
-Bank of Abel is a deliberately vulnerable online banking web application developed for educational and research purposes. The application is backed by a MySQL database and includes user roles, balance displays, and sensitive data fields to demonstrate the potential impact of broken authentication and access control issues. Again, this application is intentionally insecure and should never be deployed in a production environment.
+Bank of Abel is a deliberately vulnerable online banking web application developed for educational and research purposes. The application is backed by a MySQL database and includes user roles, balance displays, and sensitive data fields to demonstrate the potential impact of broken authentication and access control issues. **Again, this application is intentionally insecure and should never be deployed in a production environment.**
 
 # Installation
 1. Clone the Repository
