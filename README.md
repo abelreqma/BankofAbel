@@ -22,7 +22,15 @@ sudo systemctl restart [apache2, nginx, httpd]
 ```
 * Modify corresponding configuration page (/etc/x/x.conf) to connect MySQL
 
-5. Run Web Application:
+5. Run Web Application: log in with the credentials abel:qwerty123
 ```bash
 http://localhost/login.php
 ```
+
+## Login Page
+
+![alt text](https://github.com/abelreqma/BankofAbel/blob/main/pictures/login_page.png)
+
+## Dashboard
+
+![alt text](https://github.com/abelreqma/BankofAbel/blob/main/pictures/dashboard.png)
