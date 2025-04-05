@@ -4,7 +4,7 @@ Bank of Abel is a deliberately vulnerable online banking web application develop
 # Installation
 1. Clone the Repository
 ```bash
-git clone https://github.com/abelreqma/cs674
+git clone https://github.com/abelreqma/BankofAbel
 ```
 2. Set up the MySQL Database
 ```bash
@@ -12,7 +12,7 @@ mysql -u <user> -p < bank_of_abel.sql
 ```
 3. Place Project Files in Web Server Directory; i.e., `/var/www/html`
 ```bash
-sudo cp -r /path/to/cs674/* /var/www/html/
+sudo cp -r /path/to/BankofAbel/* /var/www/html/
 ```
 4. Configure Web Server:
 ```bash
