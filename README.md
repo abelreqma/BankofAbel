@@ -22,7 +22,7 @@ sudo systemctl restart [apache2, nginx, httpd]
 ```
 * Modify corresponding configuration page (/etc/x/x.conf) to connect MySQL
 
-5. Run Web Application: log in with the credentials abel:qwerty123
+5. Run Web Application: log in with the credentials **abel:qwerty123**
 ```bash
 http://localhost/login.php
 ```
